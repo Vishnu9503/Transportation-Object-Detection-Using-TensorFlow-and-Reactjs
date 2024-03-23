@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web:
+    # Build the Dockerfile in the current directory
+    build: .
+    # Map port 80 on the host to port 80 on the container
+    ports:
+      - "80:80"
+    # Set environment variables if needed
+    environment:
+      - NODE_ENV=production
